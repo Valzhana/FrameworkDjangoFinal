@@ -1,6 +1,11 @@
+from django.shortcuts import render
+
+# Create your views here.
+
 import random
 from django.http import HttpResponse
 import logging
+
 from models import HeadsTails
 
 logger = logging.getLogger(__name__)

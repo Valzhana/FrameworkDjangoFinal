@@ -1,5 +1,5 @@
 """
-URL configuration for lecture project.
+URL configuration for seminars project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -19,5 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('sem1myapp.urls')),
+    path('', include('sem2myapp.urls')),
 ]

@@ -6,3 +6,18 @@ Not Found: /
 "GET /about_me/ HTTP/1.1" 200 659
 
 
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2429
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2480
+Not Found: /one/
+"GET /one/ HTTP/1.1" 404 2459
+"GET /about_me/ HTTP/1.1" 200 659
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2429
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2480
+"GET /about_me/ HTTP/1.1" 200 659

@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class MyappConfig(AppConfig):
+class Sem2Myapp2Config(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'myapp'
+    name = 'sem2myapp2'

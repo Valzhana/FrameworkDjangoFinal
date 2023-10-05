@@ -136,7 +136,7 @@ LOGGING = {
             'handlers': ['console', 'file'],
             'level': 'INFO',
         },
-        'myapp': {
+        'sem1myapp': {
             'handlers': ['console'],
             'level': 'DEBUG',
             'propagate': True,
