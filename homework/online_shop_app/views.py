@@ -47,7 +47,6 @@ def product_update_form(request, product_id):
     if request.method == 'POST':
         form = ProductFormWidget(request.POST, request.FILES)
         if form.is_valid():
-            # Делаем что-то с данными
             logger.info(f'Получили {form.cleaned_data=}.')
             name = form.cleaned_data.get('name')
             price = form.cleaned_data.get('price')
@@ -69,7 +68,7 @@ def product_update_form(request, product_id):
 
     else:
         form = ProductFormWidget()
-    return render(request, 'myapp4/product_update.html', {'form': form})
+    return render(request, 'online_shop_app/product_update.html', {'form': form})
 
 
 def product_update_id_form(request):
@@ -77,9 +76,9 @@ def product_update_id_form(request):
         form = ProductChoiceForm(request.POST)
         if form.is_valid():
             logger.info(f'Получили {form.cleaned_data=}.')
-            prod_id = form.cleaned_data.get('product_id')  # получил id продукта - номер из выпадающего списка
-            response = redirect(f'/homework4/product_update/{prod_id}')
+            prod_id = form.cleaned_data.get('product_id')
+            response = redirect(f'/homework/product_update/{prod_id}')
             return response
     else:
         form = ProductChoiceForm()
-    return render(request, 'myapp4/product_update_id.html', {'form': form})
+    return render(request, 'online_shop_app/product_update_id.html', {'form': form})
