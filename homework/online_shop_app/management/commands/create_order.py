@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 
-from homework.online_shop_app.models import User, Order, Product
+from ...models import User, Order, Product
 
 
 class Command(BaseCommand):

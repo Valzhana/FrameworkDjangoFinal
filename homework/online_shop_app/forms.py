@@ -1,5 +1,5 @@
 from django import forms
-from homework.online_shop_app.models import Product
+from .models import Product
 
 
 class ProductFormWidget(forms.Form):

@@ -1,3 +1,4 @@
+
 from django.db import models
 
 
@@ -8,7 +9,7 @@ class User(models.Model):
     email = models.EmailField()
     password = models.CharField(max_length=100)
     phone = models.CharField(max_length=20)
-    address = models.CharField(max_length=100)
+    address = models.CharField(max_length=120)
     date_registered = models.DateField(auto_now_add=True)
 
     def __str__(self):
@@ -16,11 +17,12 @@ class User(models.Model):
 
 
 class Product(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=120)
     price = models.DecimalField(max_digits=8, decimal_places=2)
     description = models.TextField()
     quantity = models.IntegerField()
     date_added = models.DateField(auto_now_add=True)
+    image = models.ImageField(upload_to='images/', default='product')
 
     def __str__(self):
         return f'Product name: {self.name}, price: {self.price},  ' \
